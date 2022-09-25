@@ -2,6 +2,10 @@
 // A generator in PHP is a function that allows us to iterate over data 
 //without needing to build an array in memory. Unlike a standard function, which can return only a single value,
 //a generator can yield as many values as it needs to.
+
+// What is iteration with example?
+// Iteration is the process of repeating steps. For example, a very simple algorithm for eating breakfast cereal might 
+// consist of these steps: put cereal in bowl. add milk to cereal. spoon cereal and milk into mouth.
 function gen1(){
     yield '1';
     yield '2';
@@ -29,7 +33,7 @@ foreach (gen3() as $number){
     echo $number;
 }
 //https://iwconnect.com/understanding-php-generators-memory-performance/
-
+// https://alanstorm.com/php-generators-from-scratch/
 
 // function getFibonacci()
 // {
