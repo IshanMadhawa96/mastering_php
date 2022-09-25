@@ -1,0 +1,17 @@
+It is a common practice to work with large datasets as a PHP developer.
+For example, to retrieve data from an API endpoint and store it into an array so later we can iterate over 
+the array and manipulate the data according to the specific needs. Even though this can be fairly common practice, 
+sometimes the dataset can increase in size so much that it can cause memory overflow.
+
+
+In cases like this when we have a big dataset or we expect the data to increase in the future,
+generators can come to the rescue. A generator in PHP is a function that allows us to iterate over data 
+without needing to build an array in memory. Unlike a standard function, which can return only a single value,
+a generator can yield as many values as it needs to.
+
+When a generator function is invoked, as a result, we get a Generator object that can be iterated over. 
+For example, if we use the foreach loop to go through the object, 
+PHP will call the generator function each time it needs a value, 
+then saves the state of the generator when the generator yields a value 
+so that it can be resumed when the next value is required. Once there are no more values to be yielded, 
+the generator function behaves the same as when an array has run out of values.
